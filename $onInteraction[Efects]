@@ -1,0 +1,144 @@
+$nomention
+$textSplit[$message;-]
+$if[$splitText[1]==$authorID]
+$suppressErrors[]
+
+$var[MD;$if[$splitText[4]==BN]$userBanner[$splitText[2]]$elseif[$splitText[4]==IC]$userAvatar[$splitText[2]]$endif]
+
+$if[$splitText[3]==30]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Sharpen]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Sharpen"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==31]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Emboss]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Emboss"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==32]
+$var[BL;$random[0;200]]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Brillo&value=$var[BL]]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Brillo $var[BL]%"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==33]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Grain&value=100]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Grain"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==34]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Solarize]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Solarize"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==35]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Posterize]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Posterize"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==36]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Vignette]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Vignette"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==37]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=OilPaint]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["OilPaint"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==38]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Cartoon]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Cartoon"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==39]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Sketch]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Sketch"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==40]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Heatmap]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Heatmap"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==41]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/?url=$url[encode;$var[MD]?size=2048]&action=Mosaic&value=100]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Mosaic"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==42]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=SwapColors]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["SwapColors"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==43]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Glow]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Glow (BETA)"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==44]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Cromatic&value=5]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Cromático"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==45]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Watermark&text=$url[encode;$username[$splitText[2]]]]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Watermark"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+
+$if[$splitText[3]==46]
+$httpGet[https://edgabot.lucnodes.es/api/imageAction/index.php?url=$url[encode;$var[MD]?size=2048]&action=Water]
+$nomention
+$title[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif de $nickname[$splitText[2]]]
+$description[$if[$splitText[4]==BN]Banner$elseif[$splitText[4]==IC]Avatar$endif ["Reflejo agua"\](https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url])]
+$image[https://edgabot.lucnodes.es/api/imageAction/$httpResult[image_url]]
+$endif
+$endif
